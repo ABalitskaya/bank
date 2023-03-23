@@ -25,7 +25,7 @@ public class PageBase {
         select.selectByVisibleText(optionName);
     }
 
-    public void fillField(String text, WebElement field) {
+    public void fillField(WebElement field, String text) {
         click(field);
         field.clear();
         field.sendKeys(text);
