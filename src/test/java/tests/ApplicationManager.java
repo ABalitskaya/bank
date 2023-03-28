@@ -1,16 +1,11 @@
 package tests;
 
-import com.google.common.io.Files;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import java.io.File;
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -43,14 +38,6 @@ public class ApplicationManager {
         driver.manage().window().maximize();
     }
 
-
-    public String takeScreenshot() throws IOException {
-        File tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File screenshot = new File("reference/screen" + System.currentTimeMillis() + ".png");
-
-        Files.copy(tmp, screenshot);
-        return screenshot.getAbsolutePath();
-    }
 
     protected void stop() {
         driver.quit();

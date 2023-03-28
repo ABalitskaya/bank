@@ -12,6 +12,9 @@ public class CustomerLoginTest extends TestBase {
     AccountPage accountPage;
     String userName = "Harry Potter";
 
+    String notExistingUserName = " NOT Harry Potter";
+
+
     @Test
     public void loginExistingUser() {
 
@@ -27,6 +30,22 @@ public class CustomerLoginTest extends TestBase {
 
         accountPage = new AccountPage(app.driver);
         accountPage.waitForLoading();
+    }
+
+    @Test
+    public void loginWithNotExistingUser() {
+
+        homePage = new HomePage(app.driver);
+        homePage.waitForLoading();
+        homePage.clickOnCustomerLoginButton();
+
+        customerLoginPage = new CustomerLoginPage(app.driver);
+        customerLoginPage.waitForLoading();
+        try {
+            customerLoginPage.selectExistingUser(notExistingUserName);
+        } finally {
+            customerLoginPage.loginButtonIsNotPresent();
+        }
     }
 
 }

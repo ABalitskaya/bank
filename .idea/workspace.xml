@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9945609e-b19b-4a17-bd6c-f354c5dbed9f" name="Changes" comment="Described pages AddCustomerPage, OpenAccountPage">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/managerLogin/RegisterNewCustomerTest.java" afterDir="false" />
+    <list default="true" id="9945609e-b19b-4a17-bd6c-f354c5dbed9f" name="Changes" comment="Described test registerNewCustomerOpenAccountAndCustomerLogin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/PageBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/PageBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/bankManagerLogin/BankManagerLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/bankManagerLogin/BankManagerLoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/customerLogin/CustomerLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/customerLogin/CustomerLoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/login/CustomerLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/login/CustomerLoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/managerLogin/RegisterNewCustomerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/managerLogin/RegisterNewCustomerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wait/Wait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wait/Wait.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +102,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CustomerLoginTest.loginWithNotExistingUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="bank.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.login.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.login" />
+      <option name="MAIN_CLASS_NAME" value="tests.login.CustomerLoginTest" />
+      <option name="METHOD_NAME" value="loginWithNotExistingUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RegisterNewCustomerTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="bank.test" />
       <extension name="coverage">
@@ -137,8 +158,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.RegisterNewCustomerTest.registerNewCustomerOpenAccountAndCustomerLogin" />
-        <item itemvalue="TestNG.RegisterNewCustomerTest" />
+        <item itemvalue="TestNG.CustomerLoginTest.loginWithNotExistingUser" />
         <item itemvalue="TestNG.CustomerLoginTest.loginExistingUser" />
+        <item itemvalue="TestNG.RegisterNewCustomerTest" />
         <item itemvalue="TestNG.CustomerLoginTest" />
       </list>
     </recent_temporary>
@@ -180,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679567163101</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Described test registerNewCustomerOpenAccountAndCustomerLogin">
+      <created>1679571559076</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679571559076</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -200,7 +229,8 @@
     <MESSAGE value="Described test loginExistingUser and described pages for that test" />
     <MESSAGE value="Changed in build.gradle&#10;'webdrivermanager', version: '3.2.0'" />
     <MESSAGE value="Described pages AddCustomerPage, OpenAccountPage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Described pages AddCustomerPage, OpenAccountPage" />
+    <MESSAGE value="Described test registerNewCustomerOpenAccountAndCustomerLogin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Described test registerNewCustomerOpenAccountAndCustomerLogin" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

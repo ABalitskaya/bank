@@ -11,6 +11,8 @@ import pages.customerLogin.CustomerLoginPage;
 import pages.customerLogin.account.AccountPage;
 import tests.TestBase;
 
+import java.io.IOException;
+
 public class RegisterNewCustomerTest extends TestBase {
 
     HomePage homePage;
@@ -25,13 +27,16 @@ public class RegisterNewCustomerTest extends TestBase {
     String lastName = faker.name().lastName();
 
     String firstAndLastName = firstName + " " + lastName;
-    String postCode = "12364";
+    String postCode = faker.address().zipCode();
+
+    String currencyValue = "Dollar";
 
 
     @Test
-    public void registerNewCustomerOpenAccountAndCustomerLogin() {
+    public void registerNewCustomerOpenAccountAndCustomerLogin() throws IOException {
         homePage = new HomePage(app.driver);
         homePage.waitForLoading();
+        //homePage.takeAndCompareScreenshot("homePage", null);
         homePage.clickOnBankManagerButton();
 
         bankManagerLoginPage = new BankManagerLoginPage(app.driver);
@@ -52,7 +57,7 @@ public class RegisterNewCustomerTest extends TestBase {
         openAccountPage = new OpenAccountPage(app.driver);
         openAccountPage.waitForLoading();
         openAccountPage.selectExistingUser(firstAndLastName);
-        openAccountPage.selectCurrency("Dollar");
+        openAccountPage.selectCurrency(currencyValue);
         openAccountPage.clickOnProcessButton();
 
         String expectedRes = "Account created successfully with account Number :";
@@ -67,6 +72,7 @@ public class RegisterNewCustomerTest extends TestBase {
         customerLoginPage = new CustomerLoginPage(app.driver);
         customerLoginPage.waitForLoading();
         customerLoginPage.selectExistingUser(firstAndLastName);
+        customerLoginPage.checkForVisibilityLoginButton();
         customerLoginPage.clickOnLoginButton();
 
         accountPage = new AccountPage(app.driver);

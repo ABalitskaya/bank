@@ -24,8 +24,10 @@ public class CustomerLoginPage extends PageBase {
     }
 
     public void selectExistingUser(String useName) {
+
         selectOption(useName, userSelect);
     }
+
 
     public void clickOnLoginButton() {
         click(loginButton);
@@ -33,5 +35,15 @@ public class CustomerLoginPage extends PageBase {
 
     public void checkForVisibilityLoginButton() {
         wait.forVisibility(loginButton);
+    }
+
+    public void loginButtonIsNotPresent() {
+        wait.forInvisibility(loginButton);
+        //return false;
+    }
+
+    public boolean loginButtonIsNotPresentNew() {
+        wait.forInvisibility(loginButton);
+        return false;
     }
 }
